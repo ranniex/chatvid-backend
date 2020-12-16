@@ -8,10 +8,8 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./users.js')
 const PORT = process.env.PORT || 5000;
 
 const app = express();
-// app.use(cors());
 const server = http.createServer(app);
-// const ENDPOINT = 'http://localhost:3000';
-const ENDPOINT = 'https://chatvid-frontend.vercel.app';
+const ENDPOINT = '*';
 const io = require("socket.io")(server, {
     cors: {
       origin: ENDPOINT,
